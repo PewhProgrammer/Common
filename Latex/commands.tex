@@ -1,0 +1,30 @@
+\newcommand{\TODO}[1]{\textbf{\textcolor{red}{TODO: } \textcolor{gray}{#1}}}
+\newcommand{\fett}[1]{\textbf{#1}}
+\newcommand{\img}[2]{ % insert graphics 
+\begin{figure}[h]
+\centering
+\includegraphics[scale=1]{#2}
+\caption[#1]{#1}
+\end{figure}
+}
+
+\newcommand{\proscons}[3]{
+\begin{table}
+\begin{tabularx}{\linewidth}{>{\parskip1ex}X@{\kern4\tabcolsep}>{\parskip1ex}X}
+\toprule
+\hfil\bfseries Pros
+&
+\hfil\bfseries Cons
+\\\cmidrule(r{3\tabcolsep}){1-1}\cmidrule(l{-\tabcolsep}){2-2}
+
+%% PROS, seperated by empty line or \par
+#2
+&
+
+%% CONS, seperated by empty line or \par
+#3
+\\\bottomrule
+\end{tabularx}
+\caption{Pros and cons of #1}
+\end{table}
+}
